@@ -1,0 +1,42 @@
+{
+    "name": "@oh-deer-bundles/tabulator-ux-bundle",
+    "description": "Tabulator integration for Symfony",
+    "license": "MIT",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/controller.js",
+    "types": "dist/controller.d.ts",
+    "symfony": {
+        "controllers": {
+            "tabulator": {
+                "main": "dist/controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_bootstrap5.min.css": true,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_materialize.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_midnight.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_modern.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_semanticui.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_simple.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_site.min.css": false,
+                    "@oh-deer-bundles/tabulator-ux-bundle/dist/css/tabulator_site_dark.min.css": false
+                }
+            }
+        },
+        "importmap": {
+            "@hotwired/stimulus": "^3.0.0",
+            "tabulator-tables": "^6.2.5"
+        }
+    },
+    "peerDependencies": {
+        "@hotwired/stimulus": "^3.0.0",
+        "tabulator-tables": "^6.2.5"
+    },
+    "devDependencies": {
+        "@hotwired/stimulus": "^3.0.0",
+        "tabulator-tables": "^6.2.5"
+    }
+}
